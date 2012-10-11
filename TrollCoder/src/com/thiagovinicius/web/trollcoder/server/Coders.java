@@ -1,0 +1,35 @@
+package com.thiagovinicius.web.trollcoder.server;
+
+import java.util.concurrent.atomic.AtomicInteger;
+
+
+public enum Coders {
+	TROLL("/trol", new TrollCode.Coder());
+
+	public final String handle;
+	public final IdCoder coder;
+
+	private Coders(String handle, IdCoder coder) {
+		this.handle = handle;
+		this.coder = coder;
+	}
+
+	public static String getHandle(Class<?> coderClass) {
+		for (Coders i : Coders.values()) {
+			if (coderClass.isInstance(i.coder)) {
+				return i.handle;
+			}
+		}
+		return null;
+	}
+
+	public static IdCoder getCoder(String uri, AtomicInteger offset) {
+		for (Coders i : Coders.values()) {
+			if (uri.startsWith(i.handle)) {
+				offset.set(i.handle.length());
+				return i.coder;
+			}
+		}
+		return null;
+	}
+}
