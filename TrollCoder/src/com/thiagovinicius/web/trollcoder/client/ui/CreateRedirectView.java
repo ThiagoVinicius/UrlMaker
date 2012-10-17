@@ -5,13 +5,16 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
-import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
-import com.google.gwt.user.client.ui.HasText;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
+import com.thiagovinicius.web.trollcoder.client.activity.CreateRedirectActivity;
 
-public class CreateRedirectView extends Composite implements HasText {
+public class CreateRedirectView extends Composite implements
+		CreateRedirectActivity.View {
 
 	private static CreateRedirectViewUiBinder uiBinder = GWT
 			.create(CreateRedirectViewUiBinder.class);
@@ -24,25 +27,44 @@ public class CreateRedirectView extends Composite implements HasText {
 		initWidget(uiBinder.createAndBindUi(this));
 	}
 
+	private CreateRedirectActivity mActivity;
+
 	@UiField
-	Button button;
+	Button encode;
 
-	public CreateRedirectView(String firstName) {
-		initWidget(uiBinder.createAndBindUi(this));
-		button.setText(firstName);
-	}
+	@UiField
+	TextBox url;
 
-	@UiHandler("button")
+	@UiField
+	Label error;
+
+	@UiField
+	VerticalPanel redirects;
+
+	@UiHandler("encode")
 	void onClick(ClickEvent e) {
-		Window.alert("Hello!");
+		mActivity.sendUrl(url.getText());
 	}
 
-	public void setText(String text) {
-		button.setText(text);
+	@Override
+	public void setActivity(CreateRedirectActivity act) {
+		this.mActivity = act;
 	}
 
-	public String getText() {
-		return button.getText();
+	@Override
+	public void clearEncodedUrls() {
+		redirects.clear();
+	}
+
+	@Override
+	public void addEncodedUrl(String label, String url) {
+		RedirectEntry entry = new RedirectEntry(label, url);
+		redirects.add(entry);
+	}
+
+	@Override
+	public void setError(boolean errorState) {
+		error.setVisible(errorState);
 	}
 
 }

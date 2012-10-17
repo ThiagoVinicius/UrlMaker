@@ -25,6 +25,7 @@ public class MemeRedirector extends HttpServlet {
 		IdCoder coder = Coders.getCoder(encoded, offset);
 		if (coder == null) {
 			resp.sendError(404);
+			return;
 		}
 		Long id = coder.decodeId(encoded, offset.get());
 		PersistenceManager pm = PMF.get().getPersistenceManager();

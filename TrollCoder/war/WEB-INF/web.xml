@@ -2,18 +2,18 @@
 
   <!-- Servlets -->
   <servlet>
-    <servlet-name>trollCodeApi</servlet-name>
-    <servlet-class>com.thiagovinicius.web.trollcoder.server.TrollCodeApiImpl</servlet-class>
+    <servlet-name>memeCodeApi</servlet-name>
+    <servlet-class>com.thiagovinicius.web.trollcoder.server.MemeCodeApiImpl</servlet-class>
   </servlet>
   
   <servlet-mapping>
-    <servlet-name>trollCodeApi</servlet-name>
-    <url-pattern>/memeurl/api/troll</url-pattern>
+    <servlet-name>memeCodeApi</servlet-name>
+    <url-pattern>/memeurl/api</url-pattern>
   </servlet-mapping>
   
   <!-- Default page to serve -->
   <welcome-file-list>
-    <welcome-file>TrollCoder.html</welcome-file>
+    <welcome-file>MemeUrl.html</welcome-file>
   </welcome-file-list>
 
   <servlet>

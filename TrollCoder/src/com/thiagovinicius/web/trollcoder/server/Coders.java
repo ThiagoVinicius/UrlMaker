@@ -4,12 +4,14 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 
 public enum Coders {
-	TROLL("/trol", new TrollCode.Coder());
+	TROLL("Troll code", "/trol", new TrollCode.Coder(500, 500));
 
+	public final String friendlyName;
 	public final String handle;
 	public final IdCoder coder;
 
-	private Coders(String handle, IdCoder coder) {
+	private Coders(String friendlyName, String handle, IdCoder coder) {
+		this.friendlyName = friendlyName;
 		this.handle = handle;
 		this.coder = coder;
 	}

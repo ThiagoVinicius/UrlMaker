@@ -16,10 +16,10 @@ import com.thiagovinicius.web.trollcoder.client.place.CreateRedirectPlace;
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
  */
-public class TrollCoder implements EntryPoint {
+public class MemeCoder implements EntryPoint {
 
 	private SimplePanel appWidget = new SimplePanel();
-	
+
 	@Override
 	public void onModuleLoad() {
 		ClientContext clientFactory = GWT.create(ClientContext.class);
@@ -39,7 +39,6 @@ public class TrollCoder implements EntryPoint {
 		RootPanel.get().add(appWidget);
 		// Goes to place represented on URL or default place
 		historyHandler.handleCurrentHistory();
-		
 	}
-	
+
 }

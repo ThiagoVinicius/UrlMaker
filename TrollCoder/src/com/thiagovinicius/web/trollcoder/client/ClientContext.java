@@ -9,4 +9,6 @@ public interface ClientContext {
 	PlaceController getPlaceController();
 	
 	CreateRedirectView getCreateRedirectView();
+
+	MemeCodeApiAsync getTrollCodeApi();
 }

@@ -3,11 +3,22 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
 		.important {
-			font-weight: bold;
+			font-style: bold;
+		}
+		.full_width {
+			width: 100%
 		}
 	</ui:style>
 	<g:HTMLPanel>
-		Hello,
-		<g:Button styleName="{style.important}" ui:field="button" />
+		<g:VerticalPanel width="100%">
+			<g:Label text="Digite ou cole abaixo a url:"></g:Label>
+			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
+				<g:TextBox ui:field="url" visibleLength="60"></g:TextBox>
+				<g:Button text="Codificar" ui:field="encode" />
+				<g:Label text="Erro!" visible="false" ui:field="error"></g:Label>
+			</g:HorizontalPanel>
+			<g:VerticalPanel ui:field="redirects">
+			</g:VerticalPanel>
+		</g:VerticalPanel>
 	</g:HTMLPanel>
 </ui:UiBinder> 

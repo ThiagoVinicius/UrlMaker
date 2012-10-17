@@ -22,7 +22,7 @@
   <inherits name="com.google.gwt.place.Place"/>
 
   <!-- Specify the app entry point class.                         -->
-  <entry-point class='com.thiagovinicius.web.trollcoder.client.TrollCoder'/>
+  <entry-point class='com.thiagovinicius.web.trollcoder.client.MemeCoder'/>
   
   <!-- Use ClientContextImpl by default -->
   <replace-with class="com.thiagovinicius.web.trollcoder.client.ClientContextImpl">
