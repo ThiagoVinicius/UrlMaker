@@ -1,4 +1,4 @@
-package com.thiagovinicius.web.trollcoder.client.ui;
+package com.thiagovinicius.web.urlmkr.client.ui;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -11,7 +11,7 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
-import com.thiagovinicius.web.trollcoder.client.activity.CreateRedirectActivity;
+import com.thiagovinicius.web.urlmkr.client.activity.CreateRedirectActivity;
 
 public class CreateRedirectView extends Composite implements
 		CreateRedirectActivity.View {

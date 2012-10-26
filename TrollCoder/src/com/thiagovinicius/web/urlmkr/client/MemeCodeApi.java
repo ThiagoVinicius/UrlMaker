@@ -1,4 +1,4 @@
-package com.thiagovinicius.web.trollcoder.client;
+package com.thiagovinicius.web.urlmkr.client;
 
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package com.thiagovinicius.web.trollcoder.server;
+package com.thiagovinicius.web.urlmkr.server;
 
 public interface IdCoder {
 	public String encodeId(long id);

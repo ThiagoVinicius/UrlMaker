@@ -1,8 +1,8 @@
-package com.thiagovinicius.web.trollcoder.client.mvp;
+package com.thiagovinicius.web.urlmkr.client.mvp;
 
 import com.google.gwt.place.shared.PlaceHistoryMapper;
 import com.google.gwt.place.shared.WithTokenizers;
-import com.thiagovinicius.web.trollcoder.client.place.CreateRedirectPlace;
+import com.thiagovinicius.web.urlmkr.client.place.CreateRedirectPlace;
 
 /**
  * PlaceHistoryMapper interface is used to attach all places which the

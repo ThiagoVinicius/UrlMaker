@@ -1,4 +1,4 @@
-package com.thiagovinicius.web.trollcoder.client.ui;
+package com.thiagovinicius.web.urlmkr.client.ui;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.BlurEvent;

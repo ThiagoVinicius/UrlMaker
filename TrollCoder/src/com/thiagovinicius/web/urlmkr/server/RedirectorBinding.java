@@ -1,4 +1,4 @@
-package com.thiagovinicius.web.trollcoder.server;
+package com.thiagovinicius.web.urlmkr.server;
 
 import java.net.MalformedURLException;
 import java.net.URL;

@@ -1,4 +1,4 @@
-package com.thiagovinicius.web.trollcoder.server;
+package com.thiagovinicius.web.urlmkr.server;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -9,7 +9,7 @@ import javax.jdo.PersistenceManager;
 import javax.servlet.http.HttpServletRequest;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-import com.thiagovinicius.web.trollcoder.client.MemeCodeApi;
+import com.thiagovinicius.web.urlmkr.client.MemeCodeApi;
 
 /**
  * The server side implementation of the RPC service.

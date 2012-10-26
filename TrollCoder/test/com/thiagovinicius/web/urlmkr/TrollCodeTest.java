@@ -1,4 +1,4 @@
-package com.thiagovinicius.web.trollcoder;
+package com.thiagovinicius.web.urlmkr;
 
 import static org.junit.Assert.*;
 
@@ -6,7 +6,7 @@ import java.util.Random;
 
 import org.junit.Test;
 
-import com.thiagovinicius.web.trollcoder.server.TrollCode;
+import com.thiagovinicius.web.urlmkr.server.TrollCode;
 
 public class TrollCodeTest {
 

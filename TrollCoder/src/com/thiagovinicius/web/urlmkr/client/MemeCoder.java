@@ -1,4 +1,4 @@
-package com.thiagovinicius.web.trollcoder.client;
+package com.thiagovinicius.web.urlmkr.client;
 
 import com.google.gwt.activity.shared.ActivityManager;
 import com.google.gwt.activity.shared.ActivityMapper;
@@ -9,9 +9,9 @@ import com.google.gwt.place.shared.PlaceHistoryHandler;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.web.bindery.event.shared.EventBus;
-import com.thiagovinicius.web.trollcoder.client.mvp.AppActivityMapper;
-import com.thiagovinicius.web.trollcoder.client.mvp.AppPlaceHistoryMapper;
-import com.thiagovinicius.web.trollcoder.client.place.CreateRedirectPlace;
+import com.thiagovinicius.web.urlmkr.client.mvp.AppActivityMapper;
+import com.thiagovinicius.web.urlmkr.client.mvp.AppPlaceHistoryMapper;
+import com.thiagovinicius.web.urlmkr.client.place.CreateRedirectPlace;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.

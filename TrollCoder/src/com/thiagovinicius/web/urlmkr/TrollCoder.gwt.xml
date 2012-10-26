@@ -22,11 +22,11 @@
   <inherits name="com.google.gwt.place.Place"/>
 
   <!-- Specify the app entry point class.                         -->
-  <entry-point class='com.thiagovinicius.web.trollcoder.client.MemeCoder'/>
+  <entry-point class='com.thiagovinicius.web.urlmkr.client.MemeCoder'/>
   
   <!-- Use ClientContextImpl by default -->
-  <replace-with class="com.thiagovinicius.web.trollcoder.client.ClientContextImpl">
-    <when-type-is class="com.thiagovinicius.web.trollcoder.client.ClientContext"/>
+  <replace-with class="com.thiagovinicius.web.urlmkr.client.ClientContextImpl">
+    <when-type-is class="com.thiagovinicius.web.urlmkr.client.ClientContext"/>
   </replace-with>
 
   <!-- Specify the paths for translatable code                    -->

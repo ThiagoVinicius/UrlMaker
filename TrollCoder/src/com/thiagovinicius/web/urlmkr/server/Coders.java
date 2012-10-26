@@ -1,4 +1,4 @@
-package com.thiagovinicius.web.trollcoder.server;
+package com.thiagovinicius.web.urlmkr.server;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

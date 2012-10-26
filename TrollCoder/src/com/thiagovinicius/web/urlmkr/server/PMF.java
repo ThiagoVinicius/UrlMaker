@@ -1,4 +1,4 @@
-package com.thiagovinicius.web.trollcoder.server;
+package com.thiagovinicius.web.urlmkr.server;
 
 import javax.jdo.JDOHelper;
 import javax.jdo.PersistenceManagerFactory;

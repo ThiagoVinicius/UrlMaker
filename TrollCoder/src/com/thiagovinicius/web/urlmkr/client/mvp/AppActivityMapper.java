@@ -1,11 +1,11 @@
-package com.thiagovinicius.web.trollcoder.client.mvp;
+package com.thiagovinicius.web.urlmkr.client.mvp;
 
 import com.google.gwt.activity.shared.Activity;
 import com.google.gwt.activity.shared.ActivityMapper;
 import com.google.gwt.place.shared.Place;
-import com.thiagovinicius.web.trollcoder.client.ClientContext;
-import com.thiagovinicius.web.trollcoder.client.activity.CreateRedirectActivity;
-import com.thiagovinicius.web.trollcoder.client.place.CreateRedirectPlace;
+import com.thiagovinicius.web.urlmkr.client.ClientContext;
+import com.thiagovinicius.web.urlmkr.client.activity.CreateRedirectActivity;
+import com.thiagovinicius.web.urlmkr.client.place.CreateRedirectPlace;
 
 public class AppActivityMapper implements ActivityMapper {
 

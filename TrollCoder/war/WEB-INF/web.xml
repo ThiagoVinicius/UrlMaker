@@ -3,7 +3,7 @@
   <!-- Servlets -->
   <servlet>
     <servlet-name>memeCodeApi</servlet-name>
-    <servlet-class>com.thiagovinicius.web.trollcoder.server.MemeCodeApiImpl</servlet-class>
+    <servlet-class>com.thiagovinicius.web.urlmkr.server.MemeCodeApiImpl</servlet-class>
   </servlet>
   
   <servlet-mapping>
@@ -32,7 +32,7 @@
   
   <servlet>
     <servlet-name>memeRedirector</servlet-name>
-    <servlet-class>com.thiagovinicius.web.trollcoder.server.MemeRedirector</servlet-class>
+    <servlet-class>com.thiagovinicius.web.urlmkr.server.MemeRedirector</servlet-class>
   </servlet>
   
   <servlet-mapping>

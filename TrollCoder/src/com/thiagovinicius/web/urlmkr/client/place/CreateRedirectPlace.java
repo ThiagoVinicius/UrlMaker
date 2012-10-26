@@ -1,4 +1,4 @@
-package com.thiagovinicius.web.trollcoder.client.place;
+package com.thiagovinicius.web.urlmkr.client.place;
 
 import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceTokenizer;

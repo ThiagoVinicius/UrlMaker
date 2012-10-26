@@ -1,10 +1,10 @@
-package com.thiagovinicius.web.trollcoder.client;
+package com.thiagovinicius.web.urlmkr.client;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.shared.SimpleEventBus;
 import com.google.gwt.place.shared.PlaceController;
 import com.google.web.bindery.event.shared.EventBus;
-import com.thiagovinicius.web.trollcoder.client.ui.CreateRedirectView;
+import com.thiagovinicius.web.urlmkr.client.ui.CreateRedirectView;
 
 public class ClientContextImpl implements ClientContext {
 	

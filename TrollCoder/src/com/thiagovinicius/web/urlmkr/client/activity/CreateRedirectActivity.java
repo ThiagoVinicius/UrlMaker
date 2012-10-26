@@ -1,4 +1,4 @@
-package com.thiagovinicius.web.trollcoder.client.activity;
+package com.thiagovinicius.web.urlmkr.client.activity;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -7,9 +7,9 @@ import com.google.gwt.activity.shared.AbstractActivity;
 import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
-import com.thiagovinicius.web.trollcoder.client.ClientContext;
-import com.thiagovinicius.web.trollcoder.client.MemeCodeApiAsync;
-import com.thiagovinicius.web.trollcoder.client.ui.CreateRedirectView;
+import com.thiagovinicius.web.urlmkr.client.ClientContext;
+import com.thiagovinicius.web.urlmkr.client.MemeCodeApiAsync;
+import com.thiagovinicius.web.urlmkr.client.ui.CreateRedirectView;
 
 public class CreateRedirectActivity extends AbstractActivity {
 
