@@ -1,6 +1,6 @@
-TrollCoder/.gwt/
-TrollCoder/gwt-unitCache/
-TrollCoder/test-classes/
-TrollCoder/war/WEB-INF/appengine-generated/
-TrollCoder/war/WEB-INF/deploy/
-TrollCoder/war/memeurl/
+UrlMaker/.gwt/
+UrlMaker/gwt-unitCache/
+UrlMaker/test-classes/
+UrlMaker/war/WEB-INF/appengine-generated/
+UrlMaker/war/WEB-INF/deploy/
+UrlMaker/war/memeurl/
