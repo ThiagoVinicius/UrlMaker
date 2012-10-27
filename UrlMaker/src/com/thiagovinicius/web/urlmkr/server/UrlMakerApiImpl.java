@@ -70,4 +70,9 @@ public class UrlMakerApiImpl extends RemoteServiceServlet implements
 
 		return resultMap;
 	}
+
+	@Override
+	public void ping() {
+	}
+
 }

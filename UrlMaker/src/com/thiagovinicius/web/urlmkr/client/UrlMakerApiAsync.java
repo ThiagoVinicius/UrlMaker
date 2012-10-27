@@ -9,4 +9,5 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
  */
 public interface UrlMakerApiAsync {
 	void encode(String url, AsyncCallback<Map<String, String>> callback);
+	void ping(AsyncCallback<Void> callback);
 }
