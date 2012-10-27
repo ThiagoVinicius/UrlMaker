@@ -22,8 +22,8 @@ public class TrollCode {
 		}
 
 		@Override
-		public long decodeId(String encoded, int begin) {
-			return TrollCode.decodeLong(encoded.substring(begin).toCharArray());
+		public long decodeId(String encoded) {
+			return TrollCode.decodeLong(encoded.toCharArray());
 		}
 		
 	}
