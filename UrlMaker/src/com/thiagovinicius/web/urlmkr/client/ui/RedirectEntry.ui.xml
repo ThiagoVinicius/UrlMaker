@@ -4,6 +4,7 @@
 	<ui:style>
 	.codeIdPadding {
 		padding-right: 1em;
+		width: 7em;
 	}
 	</ui:style>
 	<g:HTMLPanel>
