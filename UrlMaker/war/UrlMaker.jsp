@@ -4,6 +4,19 @@
 <!-- "Standards Mode". Replacing this declaration   -->
 <!-- with a "Quirks Mode" doctype is not supported. -->
 
+<%@page import="com.google.appengine.api.utils.SystemProperty"
+		import="com.thiagovinicius.web.urlmkr.shared.DefaultValues"
+%><%
+	boolean domainOk = request.getServerName().equals(DefaultValues.MAIN_DOMAIN);
+	if (!domainOk && SystemProperty.environment.value() ==
+		SystemProperty.Environment.Value.Production) {
+		String querystr = request.getQueryString();
+		querystr = querystr == null ? "" : "?"+querystr;
+		response.sendRedirect("http://"+DefaultValues.MAIN_DOMAIN+
+			request.getRequestURI()+querystr);
+	}
+%>
+
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -17,7 +30,7 @@
     <!-- Any title is fine                         -->
     <!--                                           -->
     <title>Web Application Starter Project</title>
-    
+
     <!--                                           -->
     <!-- This script loads your compiled module.   -->
     <!-- If you add any GWT meta tags, they must   -->
@@ -35,7 +48,7 @@
 
     <!-- OPTIONAL: include this if you want history support -->
     <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe>
-    
+
     <!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
     <noscript>
       <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
@@ -48,7 +61,7 @@
 
     <table align="center">
       <tr>
-        <td colspan="2" style="font-weight:bold;">Please enter your name:</td>        
+        <td colspan="2" style="font-weight:bold;">Please enter your name:</td>
       </tr>
       <tr>
         <td id="nameFieldContainer"></td>
