@@ -38,7 +38,7 @@ public class TrollCode {
 
 	private static final int CODED_BIT_ZERO_INDEX = 4; //oool
 	private static final int CODED_BIT_ONE_INDEX = 5; //ooool
-	private static final int CODED_PADDING_AVAILABLE[] = { 2, 3, 6, 7, 8, 9, 10};
+	private static final int CODED_PADDING_AVAILABLE[] = { 2, 2, 2, 2, 2, 3, 3, 3, 3, 6, 7, 8, 9, 10};
 
 	private static final String UNARY_CODES[] = {
 		"", "l",  "ol",  "ool",  "oool",  "ooool",  "oooool",
