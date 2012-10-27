@@ -2,18 +2,18 @@
 
   <!-- Servlets -->
   <servlet>
-    <servlet-name>memeCodeApi</servlet-name>
-    <servlet-class>com.thiagovinicius.web.urlmkr.server.MemeCodeApiImpl</servlet-class>
+    <servlet-name>urlMakerApi</servlet-name>
+    <servlet-class>com.thiagovinicius.web.urlmkr.server.UrlMakerApiImpl</servlet-class>
   </servlet>
   
   <servlet-mapping>
-    <servlet-name>memeCodeApi</servlet-name>
-    <url-pattern>/memeurl/api</url-pattern>
+    <servlet-name>urlMakerApi</servlet-name>
+    <url-pattern>/urlmaker/api</url-pattern>
   </servlet-mapping>
   
   <!-- Default page to serve -->
   <welcome-file-list>
-    <welcome-file>MemeUrl.html</welcome-file>
+    <welcome-file>UrlMaker.html</welcome-file>
   </welcome-file-list>
 
   <servlet>
@@ -31,12 +31,12 @@
   </servlet-mapping>
   
   <servlet>
-    <servlet-name>memeRedirector</servlet-name>
-    <servlet-class>com.thiagovinicius.web.urlmkr.server.MemeRedirector</servlet-class>
+    <servlet-name>urlUnmaker</servlet-name>
+    <servlet-class>com.thiagovinicius.web.urlmkr.server.UrlUnmaker</servlet-class>
   </servlet>
   
   <servlet-mapping>
-    <servlet-name>memeRedirector</servlet-name>
+    <servlet-name>urlUnmaker</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
 

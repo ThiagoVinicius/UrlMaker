@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @SuppressWarnings("serial")
-public class MemeRedirector extends HttpServlet {
+public class UrlUnmaker extends HttpServlet {
 
 	@Override
 	public void init() throws ServletException {

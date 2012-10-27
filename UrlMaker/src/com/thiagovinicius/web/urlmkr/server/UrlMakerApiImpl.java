@@ -9,14 +9,14 @@ import javax.jdo.PersistenceManager;
 import javax.servlet.http.HttpServletRequest;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-import com.thiagovinicius.web.urlmkr.client.MemeCodeApi;
+import com.thiagovinicius.web.urlmkr.client.UrlMakerApi;
 
 /**
  * The server side implementation of the RPC service.
  */
 @SuppressWarnings("serial")
-public class MemeCodeApiImpl extends RemoteServiceServlet implements
-		MemeCodeApi {
+public class UrlMakerApiImpl extends RemoteServiceServlet implements
+		UrlMakerApi {
 
 	@Override
 	public Map<String, String> encode(String urlStr) throws IllegalArgumentException {

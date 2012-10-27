@@ -3,4 +3,4 @@ UrlMaker/gwt-unitCache/
 UrlMaker/test-classes/
 UrlMaker/war/WEB-INF/appengine-generated/
 UrlMaker/war/WEB-INF/deploy/
-UrlMaker/war/memeurl/
+UrlMaker/war/urlmaker/

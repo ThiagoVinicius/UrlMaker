@@ -16,7 +16,7 @@ import com.thiagovinicius.web.urlmkr.client.place.CreateRedirectPlace;
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
  */
-public class MemeCoder implements EntryPoint {
+public class UrlMaker implements EntryPoint {
 
 	private SimplePanel appWidget = new SimplePanel();
 

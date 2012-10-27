@@ -7,6 +7,6 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 /**
  * The async counterpart of <code>GreetingService</code>.
  */
-public interface MemeCodeApiAsync {
+public interface UrlMakerApiAsync {
 	void encode(String url, AsyncCallback<Map<String, String>> callback);
 }

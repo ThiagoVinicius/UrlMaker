@@ -9,6 +9,6 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
  * The client side stub for the RPC service.
  */
 @RemoteServiceRelativePath("api")
-public interface MemeCodeApi extends RemoteService {
+public interface UrlMakerApi extends RemoteService {
 	Map<String, String> encode(String url) throws IllegalArgumentException;
 }

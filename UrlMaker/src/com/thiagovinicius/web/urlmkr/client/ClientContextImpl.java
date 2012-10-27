@@ -12,7 +12,7 @@ public class ClientContextImpl implements ClientContext {
 	private static final PlaceController placeController = new PlaceController(eventBus);
 	
 	private static final CreateRedirectView createRedirectView = new CreateRedirectView();
-	private static final MemeCodeApiAsync trollCodeApi = GWT.create(MemeCodeApi.class);
+	private static final UrlMakerApiAsync trollCodeApi = GWT.create(UrlMakerApi.class);
 	
 	@Override
 	public EventBus getEventBus() {
@@ -30,7 +30,7 @@ public class ClientContextImpl implements ClientContext {
 	}
 
 	@Override
-	public MemeCodeApiAsync getTrollCodeApi() {
+	public UrlMakerApiAsync getTrollCodeApi() {
 		return trollCodeApi;
 	}
 

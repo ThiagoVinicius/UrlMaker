@@ -8,7 +8,7 @@ import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
 import com.thiagovinicius.web.urlmkr.client.ClientContext;
-import com.thiagovinicius.web.urlmkr.client.MemeCodeApiAsync;
+import com.thiagovinicius.web.urlmkr.client.UrlMakerApiAsync;
 import com.thiagovinicius.web.urlmkr.client.ui.CreateRedirectView;
 
 public class CreateRedirectActivity extends AbstractActivity {
@@ -22,7 +22,7 @@ public class CreateRedirectActivity extends AbstractActivity {
 
 	private ClientContext context;
 	private View view;
-	private MemeCodeApiAsync trollEncoder;
+	private UrlMakerApiAsync trollEncoder;
 	
 	public CreateRedirectActivity(ClientContext ctx) {
 		this.context = ctx;
