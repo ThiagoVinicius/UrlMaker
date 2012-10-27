@@ -4,7 +4,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 
 public enum Coders {
-	TROLL("Troll code", "/trol", new TrollCode.Coder(500, 500));
+	TROLL("Troll code", "/trol", new TrollCode.Coder(500, 500)),
+	FUUU("FFFUUU code", "/FFFF", new FuCoder.Coder());
 
 	public final String friendlyName;
 	public final String handle;
