@@ -27,7 +27,7 @@ public class UrlUnmaker extends HttpServlet {
 			resp.sendError(404);
 			return;
 		}
-		Long id = coder.decodeId(encoded, offset.get());
+		Long id = coder.decodeId(encoded.substring(offset.get()));
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		try {
 			RedirectorBinding redir = pm.getObjectById(RedirectorBinding.class,

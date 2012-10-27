@@ -11,4 +11,7 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 @RemoteServiceRelativePath("api")
 public interface UrlMakerApi extends RemoteService {
 	Map<String, String> encode(String url) throws IllegalArgumentException;
+
+	/**Calling this method does nothing but wake the server up.*/
+	void ping();
 }

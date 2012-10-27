@@ -2,8 +2,8 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
-		.important {
-			font-style: bold;
+		.right_padded {
+			padding-right: 2em;
 		}
 		.full_width {
 			width: 100%
@@ -11,11 +11,13 @@
 	</ui:style>
 	<g:HTMLPanel>
 		<g:VerticalPanel width="100%">
-			<g:Label text="Digite ou cole abaixo a url:"></g:Label>
+			<g:Label text="Type or paste the desired url below:"></g:Label>
 			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE">
-				<g:TextBox ui:field="url" visibleLength="60"></g:TextBox>
-				<g:Button text="Codificar" ui:field="encode" />
-				<g:Label text="Erro!" visible="false" ui:field="error"></g:Label>
+				<g:TextBox ui:field="url" visibleLength="60"/>
+				<g:Button text="Make Urls!" ui:field="encode"/>
+				<g:Label styleName="{style.right_padded}"/>
+				<g:Label text="Error! (sorry)" visible="false" ui:field="error"/>
+				<g:Label text="Working..." visible="false" ui:field="working"/>
 			</g:HorizontalPanel>
 			<g:VerticalPanel ui:field="redirects">
 			</g:VerticalPanel>

@@ -2,6 +2,8 @@ package com.thiagovinicius.web.urlmkr.client.ui;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.KeyCodes;
+import com.google.gwt.event.dom.client.KeyUpEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
@@ -39,11 +41,21 @@ public class CreateRedirectView extends Composite implements
 	Label error;
 
 	@UiField
+	Label working;
+
+	@UiField
 	VerticalPanel redirects;
 
 	@UiHandler("encode")
 	void onClick(ClickEvent e) {
 		mActivity.sendUrl(url.getText());
+	}
+
+	@UiHandler("url")
+	void onKeyUp(KeyUpEvent e) {
+		if (e.getNativeKeyCode() == KeyCodes.KEY_ENTER) {
+			encode.click();
+		}
 	}
 
 	@Override
@@ -65,6 +77,12 @@ public class CreateRedirectView extends Composite implements
 	@Override
 	public void setError(boolean errorState) {
 		error.setVisible(errorState);
+	}
+
+	@Override
+	public void setWorking(boolean workingState) {
+		encode.setEnabled(!workingState);
+		working.setVisible(workingState);
 	}
 
 }

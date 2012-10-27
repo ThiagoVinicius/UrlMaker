@@ -8,8 +8,10 @@ import java.util.Map;
 import javax.jdo.PersistenceManager;
 import javax.servlet.http.HttpServletRequest;
 
+import com.google.appengine.api.utils.SystemProperty;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.thiagovinicius.web.urlmkr.client.UrlMakerApi;
+import com.thiagovinicius.web.urlmkr.shared.DefaultValues;
 
 /**
  * The server side implementation of the RPC service.
@@ -59,10 +61,8 @@ public class UrlMakerApiImpl extends RemoteServiceServlet implements
 			uri.append(encoded);
 
 			try {
-				URL orig = new URL(req.getRequestURL().toString());
-				URL codedUrl = new URL(orig.getProtocol(), orig.getHost(),
-						orig.getPort(), uri.toString());
-				resultMap.put(coderEntry.friendlyName, codedUrl.toString());
+				String codedUrl = getRedirectUrl(req, uri.toString());
+				resultMap.put(coderEntry.friendlyName, codedUrl);
 			} catch (MalformedURLException e) {
 				e.printStackTrace();
 			}
@@ -70,4 +70,23 @@ public class UrlMakerApiImpl extends RemoteServiceServlet implements
 
 		return resultMap;
 	}
+
+	private String getRedirectUrl(HttpServletRequest req, String uri)
+			throws MalformedURLException {
+		if (SystemProperty.environment.value() ==
+				SystemProperty.Environment.Value.Production) {
+			//production environment
+			return new URL("http", DefaultValues.REDIRECT_DOMAIN, uri).toString();
+		} else {
+			//development environment
+			URL orig = new URL(req.getRequestURL().toString());
+			return new URL(orig.getProtocol(), orig.getHost(), orig.getPort(),
+					uri).toString();
+		}
+	}
+
+	@Override
+	public void ping() {
+	}
+
 }
