@@ -1,18 +1,4 @@
 <!doctype html>
-
-<%@page import="com.google.appengine.api.utils.SystemProperty"
-		import="com.thiagovinicius.web.urlmkr.shared.DefaultValues"
-%><%
-	boolean domainOk = request.getServerName().equals(DefaultValues.MAIN_DOMAIN);
-	if (!domainOk && SystemProperty.environment.value() ==
-		SystemProperty.Environment.Value.Production) {
-		String querystr = request.getQueryString();
-		querystr = querystr == null ? "" : "?"+querystr;
-		response.sendRedirect("http://"+DefaultValues.MAIN_DOMAIN+
-			request.getRequestURI()+querystr);
-	}
-%>
-
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
