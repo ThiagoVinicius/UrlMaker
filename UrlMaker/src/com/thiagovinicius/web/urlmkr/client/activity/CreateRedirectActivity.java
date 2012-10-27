@@ -22,11 +22,11 @@ public class CreateRedirectActivity extends AbstractActivity {
 
 	private ClientContext context;
 	private View view;
-	private UrlMakerApiAsync trollEncoder;
+	private UrlMakerApiAsync urlMakerRemote;
 	
 	public CreateRedirectActivity(ClientContext ctx) {
 		this.context = ctx;
-		this.trollEncoder = ctx.getTrollCodeApi();
+		this.urlMakerRemote = ctx.getUrlMakerApi();
 		this.view = null;
 	}
 	
@@ -40,7 +40,7 @@ public class CreateRedirectActivity extends AbstractActivity {
 	}
 
 	public void sendUrl(String url) {
-		trollEncoder.encode(url, new AsyncCallback<Map<String, String>>() {
+		urlMakerRemote.encode(url, new AsyncCallback<Map<String, String>>() {
 			@Override
 			public void onSuccess(Map<String, String> result) {
 				view.setError(false);

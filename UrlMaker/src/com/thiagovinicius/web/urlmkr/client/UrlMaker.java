@@ -47,7 +47,7 @@ public class UrlMaker implements EntryPoint {
 
 	private void pingServer(ClientContext clientFactory) {
 		//Calling ping does nothing, so we do the same.
-		clientFactory.getTrollCodeApi().ping(new AsyncCallback<Void>() {
+		clientFactory.getUrlMakerApi().ping(new AsyncCallback<Void>() {
 			@Override
 			public void onSuccess(Void result) {}
 			@Override

@@ -10,5 +10,5 @@ public interface ClientContext {
 	
 	CreateRedirectView getCreateRedirectView();
 
-	UrlMakerApiAsync getTrollCodeApi();
+	UrlMakerApiAsync getUrlMakerApi();
 }
