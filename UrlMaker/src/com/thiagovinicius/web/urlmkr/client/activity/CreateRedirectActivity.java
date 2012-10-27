@@ -18,6 +18,7 @@ public class CreateRedirectActivity extends AbstractActivity {
 		public void clearEncodedUrls();
 		public void addEncodedUrl(String label, String url);
 		public void setError(boolean error);
+		public void setWorking(boolean working);
 	}
 
 	private ClientContext context;
@@ -40,11 +41,14 @@ public class CreateRedirectActivity extends AbstractActivity {
 	}
 
 	public void sendUrl(String url) {
+		view.clearEncodedUrls();
+		view.setError(false);
+		view.setWorking(true);
 		urlMakerRemote.encode(url, new AsyncCallback<Map<String, String>>() {
 			@Override
 			public void onSuccess(Map<String, String> result) {
 				view.setError(false);
-				view.clearEncodedUrls();
+				view.setWorking(false);
 				String keys[] = result.keySet().toArray(new String[]{});
 				Arrays.sort(keys);
 				for (String k : keys) {
@@ -54,6 +58,7 @@ public class CreateRedirectActivity extends AbstractActivity {
 			@Override
 			public void onFailure(Throwable caught) {
 				view.setError(true);
+				view.setWorking(false);
 			}
 		});
 	}

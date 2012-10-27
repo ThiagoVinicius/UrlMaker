@@ -39,6 +39,9 @@ public class CreateRedirectView extends Composite implements
 	Label error;
 
 	@UiField
+	Label working;
+
+	@UiField
 	VerticalPanel redirects;
 
 	@UiHandler("encode")
@@ -65,6 +68,12 @@ public class CreateRedirectView extends Composite implements
 	@Override
 	public void setError(boolean errorState) {
 		error.setVisible(errorState);
+	}
+
+	@Override
+	public void setWorking(boolean workingState) {
+		encode.setEnabled(!workingState);
+		working.setVisible(workingState);
 	}
 
 }
