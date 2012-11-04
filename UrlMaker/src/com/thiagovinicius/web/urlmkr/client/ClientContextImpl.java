@@ -34,4 +34,21 @@ public class ClientContextImpl implements ClientContext {
 		return urlMakerApi;
 	}
 
+	@Override
+	public native void trackEvent(String category, String action, String label)
+	/*-{
+		$wnd._gaq.push(['_trackEvent', category, action, label]);
+	}-*/;
+
+	@Override
+	public native void trackEvent(String category, String action, String label,
+			int intArg) /*-{
+		$wnd._gaq.push(['_trackEvent', category, action, label, intArg]);
+	}-*/;
+
+	@Override
+	public native void trackPageview(String url) /*-{
+		$wnd._gaq.push(['_trackPageview', url]);
+	}-*/;
+
 }

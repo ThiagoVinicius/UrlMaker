@@ -40,13 +40,15 @@ public class CreateRedirectActivity extends AbstractActivity {
 		panel.setWidget(view);
 	}
 
-	public void sendUrl(String url) {
+	public void sendUrl(final String url) {
 		view.clearEncodedUrls();
 		view.setError(false);
 		view.setWorking(true);
+		context.trackEvent("Redirect", "OnCreate", url);
 		urlMakerRemote.encode(url, new AsyncCallback<Map<String, String>>() {
 			@Override
 			public void onSuccess(Map<String, String> result) {
+				context.trackEvent("Redirect", "CreateSuccess", url);
 				view.setError(false);
 				view.setWorking(false);
 				String keys[] = result.keySet().toArray(new String[]{});
@@ -57,6 +59,7 @@ public class CreateRedirectActivity extends AbstractActivity {
 			}
 			@Override
 			public void onFailure(Throwable caught) {
+				context.trackEvent("Redirect", "CreateError", url);
 				view.setError(true);
 				view.setWorking(false);
 			}

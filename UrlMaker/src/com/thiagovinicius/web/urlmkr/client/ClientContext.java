@@ -11,4 +11,9 @@ public interface ClientContext {
 	CreateRedirectView getCreateRedirectView();
 
 	UrlMakerApiAsync getUrlMakerApi();
+
+	void trackEvent(String category, String action, String label);
+	void trackEvent(String category, String action, String label, int intArg);
+	void trackPageview(String url);
+
 }
