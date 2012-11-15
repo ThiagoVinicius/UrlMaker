@@ -6,7 +6,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 public enum Coders {
 	TROLL("Troll code", "/trol", new TrollCode.Coder(500, 500)),
 	FUUU("FFFUUU code", "/FFFF", new FuCoder.Coder()),
-	HEX("Hex code", "/0x", new HexCoder());
+	HEX("Hex code", "/0x", new HexCoder()),
+	MORSE("Morse", "/...", new MorseCoder());
 
 	public final String friendlyName;
 	public final String handle;
