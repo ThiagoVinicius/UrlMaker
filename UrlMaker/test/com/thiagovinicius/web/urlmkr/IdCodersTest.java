@@ -24,17 +24,18 @@ public class IdCodersTest {
 	private static final int RANDOM_INPUT_COUNT = 10000;
 	private static final long RANDOM_INPUT_SEED = 1349617673000L;
 	private void runTestForCoder(IdCoder coder) {
+		String coderClassName = coder.getClass().getCanonicalName();
 		for (long v : INPUTS) {
 			String encoded = coder.encodeId(v);
 			long decoded = coder.decodeId(encoded);
-			assertEquals(v, decoded);
+			assertEquals(coderClassName, v, decoded);
 		}
 		Random rand = new Random(RANDOM_INPUT_SEED);
 		for (int i = 0; i < RANDOM_INPUT_COUNT; ++i) {
 			long v = rand.nextLong();
 			String encoded = coder.encodeId(v);
 			long decoded = coder.decodeId(encoded);
-			assertEquals(v, decoded);
+			assertEquals(coderClassName, v, decoded);
 		}
 	}
 
