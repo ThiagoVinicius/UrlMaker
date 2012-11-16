@@ -81,15 +81,19 @@ public class MorseCoder implements IdCoder {
 			}
 			morse.append(".."); // pause between letters
 		}
-		return morse.substring(0, morse.length()-3); // minus the pause signal
+		morse.setLength(morse.length()-3); // minus the pause signal
+		morse.append("~"); // for facebug, otherwise the generated URL is not clickable
+		return morse.toString();
 	}
 
 	@Override
 	public long decodeId(String encoded) {
+		final int interestLength = encoded.endsWith("~") ?
+				encoded.length() -1 : encoded.length();
 		List<SYMBOL> decodedChar = new LinkedList<MorseCoder.SYMBOL>();
 		StringBuilder encodedSignal = new StringBuilder();
 		StringBuilder intermediateResult = new StringBuilder();
-		for (int i = 0; i < encoded.length(); ++i) {
+		for (int i = 0; i < interestLength; ++i) {
 			encodedSignal.append(encoded.charAt(i));
 			if (encodedSignal.toString().equals("-.")) {
 				decodedChar.add(SYMBOL.DI);
