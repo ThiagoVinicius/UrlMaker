@@ -20,7 +20,7 @@ public class DnaCoder implements IdCoder {
 
 	@Override
 	public long decodeId(String encoded) {
-		String decoded = encoded;
+		String decoded = encoded.toUpperCase();
 		for (int i = 0; i < CODEWORDS.length; ++i) {
 			decoded = decoded.replace(
 					CODEWORDS[i],
