@@ -8,7 +8,8 @@ public enum Coders {
 	FUUU("FFFUUU code", "/FFFF", new FuCoder.Coder()),
 	HEX("Hex code", "/0x", new HexCoder()),
 	MORSE("Morse", "/...", new MorseCoder()),
-	ALPHA("Alphabet...?", "/abc", new PermutationCoder("defghijklmnopqrstuvwxyz"));
+	ALPHA("Alphabet...?", "/abc", new PermutationCoder("defghijklmnopqrstuvwxyz")),
+	DNA("Genetic code", "/GACG", new DnaCoder());
 
 	public final String friendlyName;
 	public final String handle;
